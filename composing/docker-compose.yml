@@ -23,12 +23,13 @@ services:
   #Service name
   mono-service:
     #Image name  
-    image: 1820441/spring-boot:v1
+    image: 1820441/spring-boot:v3
     #Restart policy    
     restart: always
     #Port binding   
     ports:
       - 8080:8080
+      # - 8080-8085:8080 # You can use multiple instance in this way by adding multiple ports and by removing container name
     #Docker network used
     networks:
        - mono-net
