@@ -8,7 +8,7 @@ services:
   #Service name
   mysql-service:
     #Image name
-    image: mysql-img:v1
+    image: 1820441/infy-mysql:v1
     #MySQL environment variables
     environment:
       MYSQL_ROOT_PASSWORD: root
@@ -18,12 +18,12 @@ services:
     networks:
       - mono-net
     #Name of docker container
-    container_name: mysql-con
+    container_name: mysql-mono-con
   
   #Service name
   mono-service:
     #Image name  
-    image: mono-img:latest
+    image: 1820441/spring-boot:v1
     #Restart policy    
     restart: always
     #Port binding   
